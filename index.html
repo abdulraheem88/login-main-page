@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TiresBrand Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ccc;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Login Background Section */
+    .background-img {
+      background-color: black;
+      padding: 4rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Login Form */
+    .login-form-container {
+      background: #ccc;
+      padding: 2rem 15px; /* Top/Bottom 2rem, Left/Right 15px */
+      border-radius: 0;
+      width: 100%;
+      max-width: 400px;
+      margin: 50px auto 10px auto; /* top: 50px, bottom: 10px */
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 0;
+    }
+
+    .checkbox-container {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .login-form button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 0;
+    }
+
+    .login-options {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .login-options a {
+      display: block;
+      margin: 0.25rem 0;
+      text-decoration: none;
+      color: black;
+      font-size: 0.9rem;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    footer span {
+      color: red;
+      font-weight: bold;
+    }
+
+    footer p {
+      color: #aaa;
+      margin: 0.3rem 0;
+    }
+
+    .subscribe-section p {
+      color: #aaa;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-input {
+      display: flex;
+      margin-top: 0.5rem;
+    }
+
+    .subscribe-input input {
+      flex: 1;
+      padding: 0.5rem;
+      border: none;
+      color: black;
+      background-color: white;
+    }
+
+    .subscribe-input button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .product-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Social Media Icons */
+    .social-media .icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .icon {
+      background-color: gray;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    /* Hamburger Menu - Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        margin-top: 1rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand-logo">TiresBrand</div>
+      <div class="hamburger">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="login-section">
+    <div class="background-img">
+      <div class="login-form-container">
+        <form class="login-form">
+          <h2>Login</h2>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <div class="checkbox-container">
+            <input type="checkbox" id="keep-logged-in" />
+            <label for="keep-logged-in">Keep me logged in</label>
+          </div>
+          <button type="submit">Login</button>
+          <div class="login-options">
+            <a href="#">Forgot password?</a>
+            <a href="#">Request new account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p><span>Location:</span> 123 Tire Street</p>
+        <p><span>Email:</span> support@tiresbrand.com</p>
+        <p><span>Phone:</span> +123 456 7890</p>
+      </div>
+      <div class="subscribe-section">
+        <h3>Subscribe</h3>
+        <p>Stay updated with our inventory</p>
+        <div class="subscribe-input">
+          <input type="email" placeholder="Enter email" />
+          <button>&rarr;</button>
+        </div>
+      </div>
+      <div class="recent-products">
+        <h3>Recent Products</h3>
+        <div class="product-grid">
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+          <img src="https://via.placeholder.com/100" alt="" />
+        </div>
+      </div>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <div class="icons">
+          <span class="icon">Fb</span>
+          <span class="icon">Insta</span>
+          <span class="icon">Map</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add JS logic if needed
+    // Example: Toggle hamburger menu
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
